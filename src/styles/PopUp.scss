@@ -1,0 +1,44 @@
+@import "./Colors";
+@import "./Typography";
+@import "./MainComponent";
+
+
+@keyframes myAnimation{
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    display: none;
+    opacity: 0;
+  }
+}
+
+.popUp{
+  position: absolute;
+  background-color: $color-sea-white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  @include cardContentFont();
+  left: 50%;
+  top: 12%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  h3{
+    margin-right: 10px;
+  }
+  animation-name: myAnimation;
+  animation-duration: 6000ms;
+  animation-fill-mode: forwards;
+  &__Error{
+    background-color: $color-error;
+  }
+
+
+
+}

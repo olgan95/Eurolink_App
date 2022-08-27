@@ -1,0 +1,37 @@
+@mixin headlineFont(){
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+}
+
+@mixin logInFont(){
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+@mixin bodyBoldFont(){
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@mixin cardHeadlineFont(){
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+@mixin cardContentFont(){
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 28px;
+}
+
+

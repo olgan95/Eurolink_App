@@ -1,0 +1,27 @@
+@import "./Colors";
+@import "./Typography";
+
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include headlineFont();
+  padding: 20px;
+
+  .panelPracownika{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: $color-secondary;
+    .home{
+      height: 30px;
+      margin-left: 1em;
+      color: $color-black;
+    }
+    .loggedInUser{
+      color: $color-black;
+      margin-left: 5px;
+      font-size: 20px;
+    }
+  }
+}

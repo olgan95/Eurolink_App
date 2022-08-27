@@ -1,0 +1,64 @@
+@import "./Colors";
+@import "./Typography";
+@import "./MainComponent";
+
+.form__awaria{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &__left{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+    padding-left: 3em;
+    height: 100%;
+    input[type="text"]{
+      @include InputText();
+      width: 70%;
+    }
+    label{
+      @include logInFont();
+      margin-left: 15%;
+      &:first-child{
+        margin-top: 5em;
+      }
+    }
+  }
+  &__right{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 3em;
+    padding-top: 4.2em;
+    height: 100%;
+    select{
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      @include bodyBoldFont();
+      margin-left: 15%;
+      margin-bottom: 2em;
+      margin-top: 1em;
+    }
+    textarea{
+      @include InputText();
+      height: 13em;
+      margin: 3px 15% 40px;
+      resize: none;
+      width: 70%;
+    }
+    label{
+      @include logInFont();
+      margin-left: 15%;
+    }
+    button{
+      margin-right: 15%;
+    }
+
+  }
+
+}
