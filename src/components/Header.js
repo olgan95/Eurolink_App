@@ -11,7 +11,7 @@ function Header(props) {
             {props.authenticated && <div className="panelPracownika">
                 <h1>Panel Pracownika /</h1>
                 {Object.keys(props.userData).length !==0 && <h2 className="loggedInUser">{props.userData.pracownik.Imię} {props.userData.pracownik.Nazwisko}</h2>}
-                <Link to="/" onClick={props.logout}>
+                <Link to="/Dashboard" onClick={props.logout}>
                     <FontAwesomeIcon icon={faHouseUser} className="home"/>
                 </Link>
             </div>}

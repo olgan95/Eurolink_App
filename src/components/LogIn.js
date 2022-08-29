@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import Button from "./Button";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faEye, faEyeSlash, faPaperPlane, faCircleXmark, faXmark} from '@fortawesome/free-solid-svg-icons'
 import PopUp from "./PopUp";
@@ -100,9 +99,9 @@ function LogIn(props) {
                     {/*{error && <p className="ErrorMessage"></p>}*/}
                 </div>
 
-                <Button
-                    text="Zaloguj"
-                />
+                <button className={"button-primary"}>
+                    Zaloguj
+                </button>
 
             </form>
         </>

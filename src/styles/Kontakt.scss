@@ -1,31 +1,14 @@
 @import "./Colors";
 @import "./Typography";
-@import "./MainComponent";
+@import "General";
 
 .main-card{
-  @include MainComponent();
 
-  display: flex;
-  flex-direction: column;
-
-  &__header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    h1{
-      text-align: center;
-      @include cardHeadlineFont();
-      margin: 0 auto;
-    }
-    .icon-back{
-      height: 2.5em;
-    }
-  }
   &__content{
-    display: flex;
-    flex-direction: row;
-    margin-top: 5em;
+
+    &__kontakt{
+      margin-top: 4em;
+    }
 
     &__koordynator-info{
       height: 100%;
@@ -40,6 +23,7 @@
       .koordynator-info-card{
         margin-left: 10%;
         background-color: white;
+        box-shadow: 8px 8px 24px 0px rgba(152, 193, 193, 0.61);
         width: 90%;
         padding: 1.875em;
         border-radius: 1.25em;
@@ -50,7 +34,7 @@
           display: flex;
           flex-direction: row;
           align-items: center;
-          justify-content: center;
+          //justify-content: space-around;
           margin-bottom: 25px;
 
           .icon{
@@ -68,11 +52,16 @@
               font-weight: 700;
             }
           }
+          .koordynator_img{
+            height: 6em;
+            margin-right: 1.875em;
+          }
         }
       }
     }
 
     &__koordynator-message{
+
       & > p{
         margin-left: 10%;
         @include logInFont();

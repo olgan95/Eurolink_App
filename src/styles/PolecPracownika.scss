@@ -1,0 +1,27 @@
+@import "./Colors";
+@import "./Typography";
+
+.main-card {
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__polec{
+      margin: 0 auto;
+
+      h2{
+        @include bodyFont();
+        margin-top: 1em;
+      }
+    }
+
+  }
+
+  &__content{
+    &__polec{
+      margin-top: 4em;
+    }
+  }
+
+}

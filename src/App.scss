@@ -7,12 +7,23 @@
 @use "styles/Awaria";
 @use "styles/PopUp";
 @use "styles/InformacjeOMojejPracy";
+@use "styles/Urlop";
+@use "styles/Calendar";
+@use "styles/ZarabiajWiecej";
+@use "styles/PolecPracownika";
+@use "styles/General";
+@import "styles/General";
+
 
 body{
-  background-color: white;
+  background-image: url("./resources/background mobile.png");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (min-width: map-get($medias, lg)) {
+    background-image: url("./resources/background.png");
+  }
 }
-
-
 a{
   text-decoration: none;
   color: black;

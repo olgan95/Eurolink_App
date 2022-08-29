@@ -1,22 +1,26 @@
 @import "./Colors";
 @import "./Typography";
-@import "./MainComponent";
+@import "General";
 
 .main-card__content{
-  display: flex;
-  flex-direction: row;
+
+  &__informacje{
+    margin-top: 3em;
+  }
   &__box{
-    flex: 1 1 0px;
+    box-shadow: 8px 8px 24px 4px rgba(191, 206, 206, 0.61);
+    width: 33%;
+    //flex: 1 1 0px;
     border-radius: 1.25em;
     border: 1px solid $color-black;
     padding: 2em;
     margin-left: 1.5em;
     height: 28.43em;
-      overflow: scroll;
-      overflow-x: hidden;
-      &::-webkit-scrollbar {
-        display: none;
-      }
+    overflow: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     &:first-child{
       margin-left: 0;
@@ -34,5 +38,12 @@
       width: 100%;
       margin-bottom: 10px;
     }
+    &__map{
+      overflow: hidden;
+      padding: 0;
+      padding-top: 2em;
+    }
   }
+
+
 }

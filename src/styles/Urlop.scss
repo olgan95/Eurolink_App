@@ -1,0 +1,35 @@
+@import "./Colors";
+@import "./Typography";
+@import "General";
+
+.main-card__content{
+
+  &__urlop{
+    margin-top: 3em;
+  }
+  &__type{
+    padding-top: 8px;
+    width: 50%;
+    @include logInFont();
+    padding-left: 3em;
+
+  }
+
+  &__calendar{
+    width: 50%;
+    padding-left: 3em;
+    @include logInFont();
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    p{
+      margin-bottom: 3em;
+    }
+    .button-primary{
+        margin-right: 15%;
+      margin-top: 3em;
+    }
+
+  }
+}
+

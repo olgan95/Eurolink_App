@@ -50,12 +50,12 @@ function Kontakt(props) {
                     </Link>
                     <h1>Skontaktuj się z koordynatorem</h1>
                 </div>
-                <div className="main-card__content">
+                <div className="main-card__content main-card__content__kontakt">
                     <div className="main-card__content__koordynator-info">
                         <p>Twoim koordynatorem jest:</p>
                         <div className="koordynator-info-card">
                             <div className="koordynator-info-details koordynator-info-details__bold">
-                                <FontAwesomeIcon icon={faUser} className="icon icon__bold"/>
+                                <img src={props.userData.koordynator["Zdjęcie"]} className="koordynator_img"/>
                                 <p>{props.userData.koordynator["Koordynator"]}</p>
                             </div>
                             <div className="koordynator-info-details">
@@ -78,7 +78,7 @@ function Kontakt(props) {
                             value={message}
                             onChange={handleChange}
                         />
-                            <button>Wyślij</button>
+                            <button className="button-primary">Wyślij</button>
                         </form>
                     </div>
                 </div>

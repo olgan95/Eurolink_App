@@ -19,7 +19,7 @@ function Dashboard(props) {
         return (
             <div className="dashboard">
                 <div className="dashboard_container">
-                    <Link to="/Dashboard/ZgłośUrlop">
+                    <Link to="/Dashboard/Urlop">
                         <div className="dashboard_item">
                             <FontAwesomeIcon icon={faCalendarDays} className="dashboard_item_icon"/>
                             <h4>Zgłoś Urlop</h4>
@@ -41,20 +41,20 @@ function Dashboard(props) {
 
                 <div className="dashboard_container dashboard_container_highlight">
                     <Link to="/Dashboard/PaskiWypłat">
-                        <div className="dashboard_item">
-                            <FontAwesomeIcon icon={faDollarSign} className="dashboard_item_icon"/>
+                        <div className="dashboard_item dashboard_item_highlight">
+                            <FontAwesomeIcon icon={faDollarSign} className="dashboard_item_icon dashboard_item_icon_highlight"/>
                             <h4>Paski Wypłat</h4>
                         </div>
                     </Link>
-                    <Link to="/Dashboard/PolećPracownika">
-                        <div className="dashboard_item">
-                            <FontAwesomeIcon icon={faPersonCirclePlus} className="dashboard_item_icon"/>
+                    <Link to="/Dashboard/PolecPracownika">
+                        <div className="dashboard_item dashboard_item_highlight">
+                            <FontAwesomeIcon icon={faPersonCirclePlus} className="dashboard_item_icon dashboard_item_icon_highlight"/>
                             <h4>Poleć Pracownika</h4>
                         </div>
                     </Link>
-                    <Link to="/Dashboard/JakZarabiaćWięcej">
-                        <div className="dashboard_item">
-                            <FontAwesomeIcon icon={faSackDollar} className="dashboard_item_icon"/>
+                    <Link to="/Dashboard/ZarabiajWiecej">
+                        <div className="dashboard_item dashboard_item_highlight">
+                            <FontAwesomeIcon icon={faSackDollar} className="dashboard_item_icon dashboard_item_icon_highlight"/>
                             <h4>Jak zarabiać więcej</h4>
                         </div>
                     </Link>

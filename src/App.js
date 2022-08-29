@@ -4,9 +4,12 @@ import LogIn from "./components/LogIn";
 import Dashboard from "./components/Dashboard";
 import Kontakt from "./components/Kontakt";
 import Awaria from "./components/Awaria";
+import Urlop from "./components/Urlop";
 import {Routes, Route, useNavigate} from "react-router-dom"
 import {useState} from "react";
 import InformacjeOMojejPracy from "./components/InformacjeOMojejPracy";
+import ZarabiajWiecej from "./components/ZarabiajWiecej";
+import PolecPracownika from "./components/PolecPracownika";
 
 function App() {
     const [authenticated, setAuthenticated] = useState(false);
@@ -107,6 +110,28 @@ function App() {
             <Route
                 exact path="/Dashboard/InformacjeOMojejPracy"
                 element={<InformacjeOMojejPracy
+                    authenticated={authenticated}
+                    userData={userData}
+                />
+                }
+            />
+            <Route
+                exact path="/Dashboard/Urlop"
+                element={<Urlop
+                    authenticated={authenticated}
+                    userData={userData}
+                />
+                }
+            /><Route
+                exact path="/Dashboard/ZarabiajWiecej"
+                element={<ZarabiajWiecej
+                    authenticated={authenticated}
+                    userData={userData}
+                />
+                }
+            /><Route
+                exact path="/Dashboard/PolecPracownika"
+                element={<PolecPracownika
                     authenticated={authenticated}
                     userData={userData}
                 />

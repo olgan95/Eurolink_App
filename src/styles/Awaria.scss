@@ -1,40 +1,27 @@
 @import "./Colors";
 @import "./Typography";
-@import "./MainComponent";
+@import "General";
 
-.form__awaria{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.form{
   &__left{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 50%;
-    padding-left: 3em;
-    height: 100%;
-    input[type="text"]{
-      @include InputText();
-      width: 70%;
+    &__awaria{
+      label{
+        &:first-child{
+          margin-top: 5em;
+        }
+      }
     }
     label{
       @include logInFont();
-      margin-left: 15%;
-      &:first-child{
-        margin-top: 5em;
-      }
+      //margin-left: 15%;
     }
   }
+
   &__right{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-left: 3em;
-    padding-top: 4.2em;
-    height: 100%;
+
+    &__awaria{
+      padding-top: 4.2em;
+    }
     select{
       padding: 10px 20px;
       border-radius: 20px;
@@ -53,12 +40,10 @@
     }
     label{
       @include logInFont();
-      margin-left: 15%;
+      //margin-left: 15%;
     }
-    button{
+    .button-primary{
       margin-right: 15%;
     }
-
   }
-
 }

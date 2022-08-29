@@ -7,8 +7,8 @@ import PopUp from "./PopUp";
 function Awaria(props) {
 
     const [form, setForm] = useState({
-        imie: "",
-        nazwisko: "",
+        imie: props.userData.pracownik["Imię"],
+        nazwisko: props.userData.pracownik["Nazwisko"],
         adres: "",
         rodzaj: "",
         opis: ""
@@ -46,8 +46,8 @@ function Awaria(props) {
         else {
             setpopUp(true)
             setForm({
-                imie: "",
-                nazwisko: "",
+                imie: props.userData.pracownik["Imię"],
+                nazwisko: props.userData.pracownik["Nazwisko"],
                 adres: "",
                 rodzaj: "hydraulika",
                 opis: ""
@@ -76,8 +76,8 @@ function Awaria(props) {
                         </Link>
                         <h1>Zgłoś awarię na mieszkaniu</h1>
                     </div>
-                    <form onSubmit={handleSubmit} className="form__awaria">
-                            <div className="form__awaria__left">
+                        <form onSubmit={handleSubmit} className="form">
+                            <div className="form__left form__left__awaria">
                                 <label>Imię</label>
                                 <input
                                     type="text"
@@ -100,7 +100,7 @@ function Awaria(props) {
                                     onChange={handleChange}
                                 />
                             </div>
-                            <div className="form__awaria__right">
+                            <div className="form__right form__right__awaria">
                                 <label>Rodzaj Awarii</label>
                                 <select
                                     id= "rodzaj"
@@ -120,13 +120,11 @@ function Awaria(props) {
                                     value={form.opis}
                                     onChange={handleChange}
                                 />
-                                <button>Wyślij</button>
+                                <button className="button-primary">Wyślij</button>
                             </div>
-                    </form>
+                        </form>
                 </div>
-
             </>
-
         )
     }
 }

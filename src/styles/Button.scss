@@ -1,14 +1,16 @@
 @import "./Colors";
 @import "./Typography";
 
-button{
-  width: 40%;
-  padding: 10px;
-  border-radius: 20px;
-  border: none;
+.button-primary{
   @include bodyBoldFont();
   background-color: $color-secondary;
+  box-shadow: 8px 8px 24px 0px rgba(152, 193, 193, 0.61);
   color: $color-white;
+  width: 40%;
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
   cursor: pointer;
   margin: 0 auto;
+  @include logInFont();
 }

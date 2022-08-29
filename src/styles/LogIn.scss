@@ -1,15 +1,15 @@
 @import "./Colors";
 @import "./Typography";
-@import "./MainComponent";
+@import "General";
 
 .LogIn{
+  @include MainCard();
   display: flex;
   flex-direction: column;
   width: 45em;
   padding: 40px;
   border-radius: 20px;
-  background-color: $color-ash-white;
-  margin: 20vh auto 0;
+  //margin: 20vh auto 0;
   input[type="text"]{
     @include InputText();
     width: 510px;
