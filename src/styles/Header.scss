@@ -2,19 +2,35 @@
 @import "./Typography";
 
 nav{
+  @media screen and (max-width: 890px) {
+    @include headlineFontMobile();
+  }
   background-color: $color-white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   @include headlineFont();
   padding: 20px;
+  height: 100px;
 
   .panelPracownika{
+    h1{
+      @media screen and (max-width: 890px) {
+        display: none;
+      }
+    }
+
     display: flex;
     flex-direction: row;
     align-items: center;
     color: $color-secondary;
     .home{
+      @media screen and (max-width: 890px) {
+        height: 20px;
+        margin-left: 1em;
+        color: $color-black;
+      }
       height: 30px;
       margin-left: 1em;
       color: $color-black;
@@ -24,5 +40,12 @@ nav{
       margin-left: 5px;
       font-size: 20px;
     }
+  }
+  .logo{
+    @media screen and (max-width: 1000px) {
+      //width: 40%;
+      height: 60%;
+    }
+
   }
 }

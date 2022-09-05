@@ -2,11 +2,14 @@
 @import "./Typography";
 
 .button-primary{
-  @include bodyBoldFont();
+  @media screen and (max-width: 1200px) {
+    @include logInFontMobile();
+  }
   background-color: $color-secondary;
   box-shadow: 8px 8px 24px 0px rgba(152, 193, 193, 0.61);
   color: $color-white;
   width: 40%;
+  min-width: 120px;
   padding: 15px;
   border-radius: 20px;
   border: none;

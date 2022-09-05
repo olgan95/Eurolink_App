@@ -49,7 +49,9 @@ function InformacjeOMojejPracy(props) {
                         <Link to="/Dashboard">
                             <FontAwesomeIcon icon={faCircleArrowLeft} className="icon-back"/>
                         </Link>
-                        <h1>Informacje o mojej pracy</h1>
+                        <div className="main-card__header__title">
+                            <h1>Informacje o mojej pracy</h1>
+                        </div>
                     </div>
                     <div className="main-card__content main-card__content__informacje">
                         <div className="main-card__content__box">

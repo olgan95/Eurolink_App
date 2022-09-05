@@ -12,6 +12,8 @@ import ZarabiajWiecej from "./components/ZarabiajWiecej";
 import PolecPracownika from "./components/PolecPracownika";
 
 function App() {
+
+
     const [authenticated, setAuthenticated] = useState(false);
     const [userData, setUserData] = useState({
     });
@@ -78,51 +80,52 @@ function App() {
             logout={logout}
             authenticated={authenticated}
         />
-        <Routes>
-            <Route
-                exact path="/"
-                element={<LogIn
-                    authenticate={authenticate}
+        <div className="body_box">
+            <Routes>
+                <Route
+                    exact path="/"
+                    element={<LogIn
+                        authenticate={authenticate}
+                    />
+                    }/>
+                <Route
+                    exact path="/Dashboard"
+                    element={<Dashboard
+                        authenticated={authenticated}
+                        userData={userData}
+                    />}
                 />
-            }/>
-            <Route
-                exact path="/Dashboard"
-                element={<Dashboard
-                    authenticated={authenticated}
-                    userData={userData}
-                />}
-            />
-            <Route
-                exact path="/Dashboard/Kontakt"
-                element={<Kontakt
-                    authenticated={authenticated}
-                    userData={userData}
-                />}
-            />
-            <Route
-                exact path="/Dashboard/Awaria"
-                element={<Awaria
-                    authenticated={authenticated}
-                    userData={userData}
+                <Route
+                    exact path="/Dashboard/Kontakt"
+                    element={<Kontakt
+                        authenticated={authenticated}
+                        userData={userData}
+                    />}
                 />
-            }
-            />
-            <Route
-                exact path="/Dashboard/InformacjeOMojejPracy"
-                element={<InformacjeOMojejPracy
-                    authenticated={authenticated}
-                    userData={userData}
+                <Route
+                    exact path="/Dashboard/Awaria"
+                    element={<Awaria
+                        authenticated={authenticated}
+                        userData={userData}
+                    />
+                    }
                 />
-                }
-            />
-            <Route
-                exact path="/Dashboard/Urlop"
-                element={<Urlop
-                    authenticated={authenticated}
-                    userData={userData}
+                <Route
+                    exact path="/Dashboard/InformacjeOMojejPracy"
+                    element={<InformacjeOMojejPracy
+                        authenticated={authenticated}
+                        userData={userData}
+                    />
+                    }
                 />
-                }
-            /><Route
+                <Route
+                    exact path="/Dashboard/Urlop"
+                    element={<Urlop
+                        authenticated={authenticated}
+                        userData={userData}
+                    />
+                    }
+                /><Route
                 exact path="/Dashboard/ZarabiajWiecej"
                 element={<ZarabiajWiecej
                     authenticated={authenticated}
@@ -137,7 +140,9 @@ function App() {
                 />
                 }
             />
-        </Routes>
+            </Routes>
+        </div>
+
     </div>
   );
 }

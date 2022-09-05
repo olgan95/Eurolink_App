@@ -74,7 +74,9 @@ function Awaria(props) {
                         <Link to="/Dashboard">
                             <FontAwesomeIcon icon={faCircleArrowLeft} className="icon-back"/>
                         </Link>
-                        <h1>Zgłoś awarię na mieszkaniu</h1>
+                        <div className="main-card__header__title">
+                            <h1>Zgłoś awarię na mieszkaniu</h1>
+                        </div>
                     </div>
                         <form onSubmit={handleSubmit} className="form">
                             <div className="form__left form__left__awaria">

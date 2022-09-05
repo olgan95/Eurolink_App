@@ -12,19 +12,33 @@
 @use "styles/ZarabiajWiecej";
 @use "styles/PolecPracownika";
 @use "styles/General";
-@import "styles/General";
 
 
 body{
-  background-image: url("./resources/background mobile.png");
+  @media screen and (max-width: 540px) {
+    background-image: url("./resources/background mobile.png");
+    background-size: auto;
+  }
+
+  @media screen and (max-width: 1305px) {
+    background-image: url("./resources/background mobile.png");
+  }
+
+  background-image: url("./resources/background.png");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
-  @media screen and (min-width: map-get($medias, lg)) {
-    background-image: url("./resources/background.png");
-  }
 }
 a{
   text-decoration: none;
   color: black;
+}
+
+.body_box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  min-height: calc(100vh - 100px);
+
 }

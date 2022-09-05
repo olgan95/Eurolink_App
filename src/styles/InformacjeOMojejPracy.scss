@@ -8,12 +8,21 @@
     margin-top: 3em;
   }
   &__box{
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+    }
     box-shadow: 8px 8px 24px 4px rgba(191, 206, 206, 0.61);
     width: 33%;
     //flex: 1 1 0px;
     border-radius: 1.25em;
     border: 1px solid $color-black;
     padding: 2em;
+    @media screen and (max-width: 1200px) {
+      margin-left: unset;
+      margin-bottom: 1.2em;
+      height: 15em;
+      padding: 1em;
+    }
     margin-left: 1.5em;
     height: 28.43em;
     overflow: scroll;
@@ -26,11 +35,17 @@
       margin-left: 0;
     }
     h3{
+      @media screen and (max-width: 1200px) {
+        @include logInFontMobile();
+      }
       @include logInFont();
       text-align: center;
       margin-bottom: 2em;
     }
     p{
+      @media screen and (max-width: 1200px) {
+        @include cardContentFontMobile();
+      }
       @include cardContentFont();
       text-align: justify;
     }

@@ -48,7 +48,9 @@ function Kontakt(props) {
                     <Link to="/Dashboard">
                         <FontAwesomeIcon icon={faCircleArrowLeft} className="icon-back"/>
                     </Link>
-                    <h1>Skontaktuj się z koordynatorem</h1>
+                    <div className="main-card__header__title">
+                        <h1>Skontaktuj się z koordynatorem</h1>
+                    </div>
                 </div>
                 <div className="main-card__content main-card__content__kontakt">
                     <div className="main-card__content__koordynator-info">

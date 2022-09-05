@@ -11,16 +11,29 @@
     }
 
     &__koordynator-info{
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+        margin:-0;
+      }
       height: 100%;
       width: 50%;
       margin-right: 1.25em;
       @include cardContentFont();
       & > p{
+        @media screen and (max-width: 1200px) {
+          margin: 0;
+          margin-bottom: 1em;
+          @include logInFontMobile();
+        }
         margin-left: 10%;
         @include logInFont();
       }
 
       .koordynator-info-card{
+        @media screen and (max-width: 1200px) {
+          margin: 0;
+          width: 100%;
+        }
         margin-left: 10%;
         background-color: white;
         box-shadow: 8px 8px 24px 0px rgba(152, 193, 193, 0.61);
@@ -31,13 +44,26 @@
         @include cardContentFont();
 
         .koordynator-info-details{
+          @media screen and (max-width: 1200px) {
+            justify-content: flex-start;
+          }
           display: flex;
           flex-direction: row;
           align-items: center;
-          //justify-content: space-around;
+          justify-content: space-around;
           margin-bottom: 25px;
+          p{
+            @media screen and (max-width: 470px) {
+              max-width: 120px;
+              overflow-wrap: break-word;
+            }
+          }
 
           .icon{
+            @media screen and (max-width: 1200px) {
+              height: 1.2em;
+              margin-right: 1em;
+            }
             height: 1.875em;
             margin-right: 1.875em;
             &__bold{
@@ -46,6 +72,9 @@
           }
 
           &__bold{
+            @media screen and (max-width: 1200px) {
+              margin-bottom: 25px;
+            }
             margin-bottom: 3.125em;
             p{
               font-size: 1.25em;
@@ -55,25 +84,44 @@
           .koordynator_img{
             height: 6em;
             margin-right: 1.875em;
+            @media screen and (max-width: 1200px) {
+              height: 5em;
+            }
           }
         }
       }
     }
 
     &__koordynator-message{
-
-      & > p{
-        margin-left: 10%;
-        @include logInFont();
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+        margin: 0;
+        margin-top: 2em;
       }
       height: 100%;
       width: 50%;
       @include cardContentFont();
       margin-left: 20px;
+
+      & > p{
+        @media screen and (max-width: 1200px) {
+          margin: 0;
+          @include logInFontMobile();
+        }
+        margin-left: 10%;
+        @include logInFont();
+      }
       form{
         display: flex;
         flex-direction: column;
         textarea{
+          @media screen and (max-width: 1200px) {
+            @include InputTextMobile();
+            margin: 0;
+            margin-bottom: 1em;
+            height: 200px;
+            width: 100%;
+          }
           @include InputText();
           height: 270px;
           margin-top: 30px;

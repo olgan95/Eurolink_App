@@ -1,6 +1,5 @@
 import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faPaperPlane, faCircleXmark, faXmark} from "@fortawesome/free-solid-svg-icons";
 
 function PopUp(props) {
     return (

@@ -68,7 +68,7 @@ function PolecPracownika(props) {
                         <Link to="/Dashboard">
                             <FontAwesomeIcon icon={faCircleArrowLeft} className="icon-back"/>
                         </Link>
-                        <div className="main-card__header__polec">
+                        <div className="main-card__header__title main-card__header__polec">
                             <h1>Poleć pracownika</h1>
                             <h2>i zarób 150zł po przepracowanym miesiącu</h2>
                         </div>

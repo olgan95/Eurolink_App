@@ -8,7 +8,7 @@
     opacity: 1;
   }
   50%{
-    opacity: 0.5;
+    opacity: 0.6;
   }
   100%{
     display: none;
@@ -17,6 +17,7 @@
 }
 
 .popUp{
+  //z-index: 2;
   position: absolute;
   background-color: $color-sea-white;
   padding: 10px 20px;
@@ -33,7 +34,7 @@
     margin-right: 10px;
   }
   animation-name: myAnimation;
-  animation-duration: 6000ms;
+  animation-duration: 8000ms;
   animation-fill-mode: forwards;
   &__Error{
     background-color: $color-error;

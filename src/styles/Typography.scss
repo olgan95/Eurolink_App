@@ -1,8 +1,18 @@
+@import "./Colors";
+
 @mixin headlineFont(){
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  letter-spacing: 0.1em;
+}
+
+@mixin headlineFontMobile(){
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
   letter-spacing: 0.1em;
 }
 
@@ -14,10 +24,23 @@
   text-transform: uppercase;
 }
 
+@mixin logInFontMobile(){
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
 @mixin bodyFont(){
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 20px;
+}
+@mixin bodyFontMobile(){
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 @mixin bodyBoldFont(){
@@ -26,10 +49,22 @@
   font-size: 20px;
 }
 
+@mixin bodyBoldFontMobile(){
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
 @mixin cardHeadlineFont(){
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 32px;
+}
+
+@mixin cardHeadlineFontMobile(){
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 @mixin cardContentFont(){
@@ -40,4 +75,36 @@
   line-height: 28px;
 }
 
+@mixin cardContentFontMobile(){
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  line-height: 16px;
+}
 
+@mixin InputText(){
+  padding: 0.625em;
+  border: none;
+  border-bottom: 1px solid $color-black;
+  background-color: transparent;
+  margin: 1em auto 3.75em;
+  font-size: 1.25em;
+  &:focus{
+    outline: none;
+  }
+  @include cardContentFont();
+}
+
+@mixin InputTextMobile(){
+  padding: 0.625em;
+  border: none;
+  border-bottom: 1px solid $color-black;
+  background-color: transparent;
+  margin: 1em auto 3em;
+  font-size: 14px;
+  &:focus{
+    outline: none;
+  }
+  @include cardContentFont();
+}

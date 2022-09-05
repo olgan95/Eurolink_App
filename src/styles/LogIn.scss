@@ -3,18 +3,34 @@
 @import "General";
 
 .LogIn{
+  @media screen and (max-width: 890px) {
+    padding: 20px;
+    input[type="text"]{
+      @include InputTextMobile();
+      width: 80%;
+    }
+  }
+  @media screen and (min-width: 769px) {
+    input[type="text"]{
+      @include InputText();
+      width: 510px;
+    }
+  }
+
   @include MainCard();
   display: flex;
   flex-direction: column;
-  width: 45em;
+  width: 80%;
+  max-width: 45em;
   padding: 40px;
   border-radius: 20px;
-  //margin: 20vh auto 0;
-  input[type="text"]{
-    @include InputText();
-    width: 510px;
-  }
+
   .password{
+    @media screen and (max-width: 890px) {
+      width: 80%;
+      margin: 0 auto;
+    }
+
     position: relative;
     margin: 0 65px;
     .hide{
@@ -24,9 +40,30 @@
       margin-left: -30px;
       cursor: pointer;
     }
+
+    @media screen and (max-width: 890px) {
+      input[type="password"]{
+        @include InputTextMobile();
+        width: 100%;
+        margin: unset;
+      }
+      input[type="text"]{
+        @include InputTextMobile();
+        width: 100%;
+        margin: unset;
+      }
+    }
+
+
     input[type="password"]{
-      @include InputText();
-      width: 510px;
+        @include InputText();
+        width: 100%;
+      margin: 1em auto 3em;
+    }
+    input[type="text"]{
+        @include InputText();
+        width: 100%;
+      margin: 1em auto 3em;
     }
   }
 
@@ -50,4 +87,6 @@
     position: absolute;
     bottom: 20px;
   }
+
+
 }

@@ -1,9 +1,6 @@
 import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-    faUser,
-    faPhone,
-    faEnvelope,
     faPaperPlane,
     faCircleArrowLeft,
     faCircleXmark
@@ -11,7 +8,6 @@ import {
 import {Navigate, Link} from "react-router-dom";
 import PopUp from "./PopUp";
 import Calendar from 'react-calendar';
-import toDate from "react-calendar/dist/umd/Calendar";
 
 function Urlop(props) {
 
@@ -87,7 +83,9 @@ function Urlop(props) {
                         <Link to="/Dashboard">
                             <FontAwesomeIcon icon={faCircleArrowLeft} className="icon-back"/>
                         </Link>
-                        <h1>Zgłoś Urlop</h1>
+                        <div className="main-card__header__title">
+                            <h1>Zgłoś Urlop</h1>
+                        </div>
                     </div>
                     <div className="main-card__content main-card__content__urlop">
                         <div className="main-card__content__left main-card__content__type">

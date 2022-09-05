@@ -10,7 +10,6 @@ import {
     faComments
 } from '@fortawesome/free-solid-svg-icons'
 import {Link, Navigate} from "react-router-dom";
-import {useState, useEffect} from "react";
 
 function Dashboard(props) {
     if (!props.authenticated) {
@@ -18,6 +17,28 @@ function Dashboard(props) {
     } else {
         return (
             <div className="dashboard">
+
+                <div className="dashboard_container dashboard_container_highlight_mobile">
+                    <Link to="/Dashboard/PaskiWypłat">
+                        <div className="dashboard_item dashboard_item_highlight">
+                            <FontAwesomeIcon icon={faDollarSign} className="dashboard_item_icon dashboard_item_icon_highlight"/>
+                            <h4>Paski Wypłat</h4>
+                        </div>
+                    </Link>
+                    <Link to="/Dashboard/PolecPracownika">
+                        <div className="dashboard_item dashboard_item_highlight">
+                            <FontAwesomeIcon icon={faPersonCirclePlus} className="dashboard_item_icon dashboard_item_icon_highlight"/>
+                            <h4>Poleć Pracownika</h4>
+                        </div>
+                    </Link>
+                    <Link to="/Dashboard/ZarabiajWiecej">
+                        <div className="dashboard_item dashboard_item_highlight">
+                            <FontAwesomeIcon icon={faSackDollar} className="dashboard_item_icon dashboard_item_icon_highlight"/>
+                            <h4>Jak zarabiać więcej</h4>
+                        </div>
+                    </Link>
+                </div>
+
                 <div className="dashboard_container">
                     <Link to="/Dashboard/Urlop">
                         <div className="dashboard_item">
