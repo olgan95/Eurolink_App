@@ -7,6 +7,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import {Navigate, Link} from "react-router-dom";
 import PopUp from "./PopUp";
+import PopUpSend from "./PopUpSend";
 import Calendar from 'react-calendar';
 
 function Urlop(props) {
@@ -16,9 +17,9 @@ function Urlop(props) {
         daty: []
     })
     const [popUp, setpopUp] = useState(false)
+    const [popUpSend, setpopUpSend] = useState(false)
     const [error, setError] = useState(false)
     const [message, setMessage] = useState("")
-    //const [value, onChange] = useState(new Date());
     const [value, onChange] = useState("");
 
     function handleChange(event){
@@ -49,24 +50,34 @@ function Urlop(props) {
 
     function handleSubmit(event){
 
-        console.log(form.daty.length)
-
         if (form.daty.length===0){
             setError(true)
             setMessage("Daty nie mogą być puste")
         } else {
-            setpopUp(true)
-            setForm({
-                rodzaj: "wypoczynkowy",
-                daty: []
-            })
-            onChange("")
+            setpopUpSend(true)
+
         }
 
         setTimeout(()=>{
             setpopUp(false)
             setError(false)
         }, 5000)
+    }
+
+    function handleSendData(event){
+        event.preventDefault()
+        setpopUp(true)
+        setForm({
+            rodzaj: "wypoczynkowy",
+            daty: []
+        })
+        onChange("")
+        setpopUpSend(false)
+    }
+
+    function handleCorrectData(event){
+        event.preventDefault()
+        setpopUpSend(false)
     }
 
     if (!props.authenticated) {
@@ -77,6 +88,15 @@ function Urlop(props) {
                 {popUp && <PopUp message = "Message Sent!" icon = {faPaperPlane} className="popUp"/> }
                 {error &&
                     <PopUp message={message} icon={faCircleXmark} className="popUp popUp__Error"/>}
+
+
+                {popUpSend && <PopUpSend
+                    form = {form}
+                    text = "Próbujesz zgłosić następujący urlop:"
+                    handleSendData = {handleSendData}
+                    handleCorrectData = {handleCorrectData}
+                />
+                }
 
                 <div className="main-card">
                     <div className="main-card__header">
@@ -134,7 +154,6 @@ function Urlop(props) {
                                     onChange = {handleCalendarChange}
                                     value={value}
                                     selectRange= {true}
-                                    //allowPartialRange = {true}
                                 />
                             <button className="button-primary"
                                     onClick={handleSubmit}>Wyślij</button>

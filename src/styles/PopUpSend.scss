@@ -1,0 +1,53 @@
+@import "./Colors";
+@import "./Typography";
+@import "General";
+
+.PopUpSendBox {@media screen and (max-width: 1000px) {
+  width: 70%;
+  @include logInFontMobile();
+  top: 18%;
+}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 3;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 10px 20px;
+  border-radius: 20px;
+  @include logInFont();
+  margin: auto 0;
+
+  max-width: 1150px;
+  width: 40%;
+  height: 40%;
+  border: 1px solid $color-grey-green;
+
+  &__text{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    &__title{
+      margin-bottom: 1em;
+    }
+    &__selected{
+      color: $color-secondary;
+      margin-left: 2em;
+    }
+  }
+
+  &__buttons{
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+    }
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    margin-top: 2em;
+  }
+
+}

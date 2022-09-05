@@ -17,3 +17,40 @@
   margin: 0 auto;
   @include logInFont();
 }
+
+.button-success{
+  @media screen and (max-width: 1200px) {
+    @include logInFontMobile();
+    width: 60%;
+  }
+  background-color: $color-grey-green;
+  box-shadow: 8px 8px 24px 0px rgba(152, 193, 193, 0.61);
+  color: $color-white;
+  width: 40%;
+  min-width: 120px;
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto;
+  @include logInFont();
+}
+
+.button-error{
+  @media screen and (max-width: 1200px) {
+    @include logInFontMobile();
+    width: 60%;
+    margin-top: 1.2em;
+  }
+  background-color: $color-error;
+  box-shadow: 8px 8px 24px 0px rgba(152, 193, 193, 0.61);
+  color: $color-white;
+  width: 40%;
+  min-width: 120px;
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto;
+  @include logInFont();
+}
