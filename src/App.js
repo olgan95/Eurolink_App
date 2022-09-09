@@ -81,7 +81,7 @@ function App() {
             authenticated={authenticated}
         />
         <div className="body_box">
-            <HashRouter>
+            <Routes>
                 <Route
                     exact path="/"
                     element={<LogIn
@@ -140,7 +140,7 @@ function App() {
                 />
                 }
             />
-            </HashRouter>
+            </Routes>
         </div>
 
     </div>
