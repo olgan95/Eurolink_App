@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faEye, faEyeSlash, faPaperPlane, faCircleXmark, faXmark} from '@fortawesome/free-solid-svg-icons'
 import PopUp from "./PopUp";
@@ -22,6 +22,8 @@ function LogIn(props) {
         }
     )
     const [error, setError] = useState(false)
+    const [userCheck, setUserCheck] = useState([])
+
 
     function handleChange(event){
         const {name, value} = event.target
@@ -33,26 +35,34 @@ function LogIn(props) {
         })
     }
 
+    useEffect(()=>{
+        let login_user
+        const login = fetch('https://my-json-server.typicode.com/olgan95/eurolink_app/pracownicy')
+            .then(response => response.json())
+            .then(data => {
+                login_user = data
+            })
+            .catch(error => {
+                console.log(error);
+            });
+
+        const loggedinUser = login.then(r=>{
+            setUserCheck(login_user)
+        })
+    }, [])
+
     function handleSubmit(event){
         event.preventDefault()
         setError(false)
+        const userChecked = userCheck[0]
 
-        // fetch('http://localhost:3000/users', {
-        //     method: 'POST',
-        //     headers: {'Content-Type' : 'application/json'},
-        //     body: JSON.stringify({
-        //         email: 'jan.kowalski@eurolink.pl',
-        //         password: 'pracownik1'
-        //     })
-        // })
-        //     .then(res => res.json())
-        //     .then(data => console.log(data))
+        if (userChecked.email === LoginData.email && userChecked.password === LoginData.password) {
+            props.authenticate(userChecked)
+        }
+        else{
+            setError(true)
+        }
 
-        fetch('https://my-json-server.typicode.com/olgan95/eurolink_app/users')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
-            })
     }
 
     return (
