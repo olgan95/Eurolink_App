@@ -48,24 +48,10 @@ function LogIn(props) {
         //     .then(res => res.json())
         //     .then(data => console.log(data))
 
-        fetch('http://localhost:3000/login', {
-            method: 'POST',
-            headers: {'Content-Type' : 'application/json'},
-            body: JSON.stringify(LoginData)
-        })
-            .then(res => {
-                if(res.ok) {
-                    return res.json()
-                }
-                throw new Error ("Error!")
-                })
+        fetch('https://my-json-server.typicode.com/olgan95/eurolink_app/users')
+            .then(response => response.json())
             .then(data => {
-                setError(false)
-                props.authenticate(data.user)
-            })
-            .catch(err=>{
-                console.log(err)
-                setError(true)
+                console.log(data)
             })
     }
 

@@ -26,7 +26,7 @@ function App() {
         let koordynator;
         let klient
 
-        const result = fetch('http://localhost:3000/pracownicy')
+        const result = fetch('https://my-json-server.typicode.com/olgan95/eurolink_app/pracownicy')
             .then(response => response.json())
             .then(data => {
                 pracownik = data.find(person=>
@@ -34,7 +34,7 @@ function App() {
                             person.email === user.email
                         )
                     )
-                return fetch('http://localhost:3000/koordynatorzy')
+                return fetch('https://my-json-server.typicode.com/olgan95/eurolink_app/Koordynatorzy')
             })
             .then(response => response.json())
             .then(data => {
@@ -43,7 +43,7 @@ function App() {
                                 person.Klient === pracownik.Klient
                             )
                         )
-                return fetch('http://localhost:3000/Klienci')
+                return fetch('https://my-json-server.typicode.com/olgan95/eurolink_app/Klienci')
             })
             .then(response => response.json())
             .then(data => {

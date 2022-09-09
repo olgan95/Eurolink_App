@@ -1,7 +1,7 @@
 {
 	"users": [{
 		"email": "jan.kowalski@eurolink.pl",
-		"password": "$2a$10$NgSKGdkIXblbNu.167eaRu2Zj5kjcBCaULks9ZH9kXabQJWwK7hOK",
+		"password": "pracownik1",
 		"id": 1
 	}],
 	"pracownicy": [{
