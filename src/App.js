@@ -5,7 +5,7 @@ import Dashboard from "./components/Dashboard";
 import Kontakt from "./components/Kontakt";
 import Awaria from "./components/Awaria";
 import Urlop from "./components/Urlop";
-import {Routes, Route, useNavigate} from "react-router-dom"
+import {Routes, Route, useNavigate, HashRouter} from "react-router-dom"
 import {useState} from "react";
 import InformacjeOMojejPracy from "./components/InformacjeOMojejPracy";
 import ZarabiajWiecej from "./components/ZarabiajWiecej";
@@ -81,7 +81,7 @@ function App() {
             authenticated={authenticated}
         />
         <div className="body_box">
-            <Routes>
+            <HashRouter>
                 <Route
                     exact path="/"
                     element={<LogIn
@@ -140,7 +140,7 @@ function App() {
                 />
                 }
             />
-            </Routes>
+            </HashRouter>
         </div>
 
     </div>
