@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/eurolink_app/static/css/main.d34301b9.chunk.css",
-    "main.js": "/eurolink_app/static/js/main.9bfca193.chunk.js",
-    "main.js.map": "/eurolink_app/static/js/main.9bfca193.chunk.js.map",
-    "runtime-main.js": "/eurolink_app/static/js/runtime-main.2ee8f7d0.js",
-    "runtime-main.js.map": "/eurolink_app/static/js/runtime-main.2ee8f7d0.js.map",
-    "static/js/2.ffdc5ccd.chunk.js": "/eurolink_app/static/js/2.ffdc5ccd.chunk.js",
-    "static/js/2.ffdc5ccd.chunk.js.map": "/eurolink_app/static/js/2.ffdc5ccd.chunk.js.map",
-    "static/js/3.2ad9086b.chunk.js": "/eurolink_app/static/js/3.2ad9086b.chunk.js",
-    "static/js/3.2ad9086b.chunk.js.map": "/eurolink_app/static/js/3.2ad9086b.chunk.js.map",
-    "index.html": "/eurolink_app/index.html",
-    "static/css/main.d34301b9.chunk.css.map": "/eurolink_app/static/css/main.d34301b9.chunk.css.map",
-    "static/js/2.ffdc5ccd.chunk.js.LICENSE.txt": "/eurolink_app/static/js/2.ffdc5ccd.chunk.js.LICENSE.txt",
-    "static/media/App.scss": "/eurolink_app/static/media/background.45104999.png"
+    "main.css": "/eurolink_app/index.html/static/css/main.4df05a98.chunk.css",
+    "main.js": "/eurolink_app/index.html/static/js/main.9bfca193.chunk.js",
+    "main.js.map": "/eurolink_app/index.html/static/js/main.9bfca193.chunk.js.map",
+    "runtime-main.js": "/eurolink_app/index.html/static/js/runtime-main.c32fd7a1.js",
+    "runtime-main.js.map": "/eurolink_app/index.html/static/js/runtime-main.c32fd7a1.js.map",
+    "static/js/2.ffdc5ccd.chunk.js": "/eurolink_app/index.html/static/js/2.ffdc5ccd.chunk.js",
+    "static/js/2.ffdc5ccd.chunk.js.map": "/eurolink_app/index.html/static/js/2.ffdc5ccd.chunk.js.map",
+    "static/js/3.2ad9086b.chunk.js": "/eurolink_app/index.html/static/js/3.2ad9086b.chunk.js",
+    "static/js/3.2ad9086b.chunk.js.map": "/eurolink_app/index.html/static/js/3.2ad9086b.chunk.js.map",
+    "index.html": "/eurolink_app/index.html/index.html",
+    "static/css/main.4df05a98.chunk.css.map": "/eurolink_app/index.html/static/css/main.4df05a98.chunk.css.map",
+    "static/js/2.ffdc5ccd.chunk.js.LICENSE.txt": "/eurolink_app/index.html/static/js/2.ffdc5ccd.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/eurolink_app/index.html/static/media/background.45104999.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.2ee8f7d0.js",
+    "static/js/runtime-main.c32fd7a1.js",
     "static/js/2.ffdc5ccd.chunk.js",
-    "static/css/main.d34301b9.chunk.css",
+    "static/css/main.4df05a98.chunk.css",
     "static/js/main.9bfca193.chunk.js"
   ]
 }
